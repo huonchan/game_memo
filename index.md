@@ -1,4 +1,4 @@
-# 個人的ゲームメモ
+# おひメモ ゲーム
 
 ![城ヶ崎姫子](./top.WebP)
 
@@ -16,10 +16,14 @@
 - [用意](./mh_rise_sb/特産品集め_用意.md)
     - [水没林]()
     - [寒冷群島]()
+    - [砂原]()
 
+---
 
 ## スプラトゥーン3
 基本やりたくねーわこんなクソゲー
+
+---
 
 ## モンスターハンターRISE（非SUNBREAKでも実現可）
 TODO:サンブレとかはまた別途項目作るべきかね
@@ -35,7 +39,12 @@ TODO:サンブレとかはまた別途項目作るべきかね
 
 #### ダミー
 
+---
 
+<details>
+  <summary>個人用</summary>
+  
+    https://qiita.com/P-man_Brown/items/067bfa132eb3c4b49bc4
 ## 記法
 https://qiita.com/Hase-pro/items/16379a0c83f2725e3a11
  ```
@@ -180,4 +189,4 @@ https://qiita.com/miriwo/items/3ac6c90f1e6111d8e994
 
 
 ```
-
+</details>
