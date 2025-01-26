@@ -12,6 +12,12 @@
 - [現行プレイスタイル](./mh_rise_sb/現行プレイスタイル.md)
 - [各種採取物調合一覧](./mh_rise/収集物錬金一覧表.md)
 
+### マイセット(+α）論
+- [アイテムマイセット](./mh_rise_sb/アイテムマイセット.md)
+- アイテムショートカット
+- 重ね着マイセット
+- ハンターマイセット
+
 ### 特産品集め
 - [用意](./mh_rise_sb/特産品集め_用意.md)
     - [水没林]()
@@ -43,7 +49,7 @@ TODO:サンブレとかはまた別途項目作るべきかね
 
 <details>
   <summary>個人用</summary>
-  
+
     https://qiita.com/P-man_Brown/items/067bfa132eb3c4b49bc4
 ## 記法
 https://qiita.com/Hase-pro/items/16379a0c83f2725e3a11
