@@ -4,6 +4,7 @@
 
 **現状はモンハンの事しか書く気ないのでモンハンのみ**
 
+[雑記はてブロ](https://princess-game.hatenablog.com/)
 
 ## モンスターハンターRISE:SUNBREAK
 
