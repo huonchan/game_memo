@@ -42,4 +42,5 @@ def csv_to_html(csv_file, html_file):
         file.write('</html>\n')
 
 if __name__ == '__main__':
-    csv_to_html('mh_rise_sb/light_bowgun_data - list.csv', 'mh_rise_sb/light_bowgun_data.html')
+    csv_to_html('mh_rise_sb/light_bowgun_data/light_bowgun_data - list.csv', 
+                'mh_rise_sb/light_bowgun_data/light_bowgun_data.html')
