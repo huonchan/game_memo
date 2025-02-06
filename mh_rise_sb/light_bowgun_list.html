@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>テーブル行の表示・非表示</title>
+<title>テーブル列の表示・非表示</title>
 <style>
   .hidden-row {
     display: none;
@@ -11,54 +11,71 @@
 </head>
 <body>
 
-<h1>商品一覧</h1>
+<h1>従業員一覧</h1>
 
-<label><input type="checkbox" id="check1"> 1行目を表示</label><br>
-<label><input type="checkbox" id="check2"> 2行目を表示</label><br>
-<label><input type="checkbox" id="check3"> 3行目を表示</label><br>
+<label><input type="checkbox" id="checkName" checked> 氏名</label><br>
+<label><input type="checkbox" id="checkAge" checked> 年齢</label><br>
+<label><input type="checkbox" id="checkDepartment" checked> 部署</label><br>
 
-<table>
+<table id="employeeTable">
   <thead>
     <tr>
-      <th>商品名</th>
-      <th>価格</th>
+      <th>氏名</th>
+      <th>年齢</th>
+      <th>部署</th>
     </tr>
   </thead>
   <tbody>
-    <tr id="row1">
-      <td>りんご</td>
-      <td>100円</td>
+    <tr>
+      <td>田中太郎</td>
+      <td>30</td>
+      <td>営業部</td>
     </tr>
-    <tr id="row2">
-      <td>みかん</td>
-      <td>80円</td>
+    <tr>
+      <td>佐藤花子</td>
+      <td>25</td>
+      <td></td>
     </tr>
-    <tr id="row3">
-      <td>バナナ</td>
-      <td>120円</td>
+    <tr>
+      <td>鈴木一郎</td>
+      <td>40</td>
+      <td>開発部</td>
     </tr>
   </tbody>
 </table>
 
 <script>
-  const check1 = document.getElementById('check1');
-  const check2 = document.getElementById('check2');
-  const check3 = document.getElementById('check3');
-  const row1 = document.getElementById('row1');
-  const row2 = document.getElementById('row2');
-  const row3 = document.getElementById('row3');
+  const checkName = document.getElementById('checkName');
+  const checkAge = document.getElementById('checkAge');
+  const checkDepartment = document.getElementById('checkDepartment');
+  const table = document.getElementById('employeeTable');
 
-  check1.addEventListener('change', () => {
-    row1.classList.toggle('hidden-row', !check1.checked);
-  });
+  function updateTable() {
+    const rows = table.querySelectorAll('tbody tr');
+    rows.forEach(row => {
+      const nameCell = row.cells[0];
+      const ageCell = row.cells[1];
+      const departmentCell = row.cells[2];
 
-  check2.addEventListener('change', () => {
-    row2.classList.toggle('hidden-row', !check2.checked);
-  });
+      nameCell.classList.toggle('hidden-col', !checkName.checked);
+      ageCell.classList.toggle('hidden-col', !checkAge.checked);
+      departmentCell.classList.toggle('hidden-col', !checkDepartment.checked);
 
-  check3.addEventListener('change', () => {
-    row3.classList.toggle('hidden-row', !check3.checked);
-  });
+      // 部署が空で、部署チェックボックスがオフの場合、行を非表示
+      if (departmentCell.textContent.trim() === "" && !checkDepartment.checked) {
+        row.classList.add('hidden-row');
+      } else {
+        row.classList.remove('hidden-row');
+      }
+    });
+  }
+
+  checkName.addEventListener('change', updateTable);
+  checkAge.addEventListener('change', updateTable);
+  checkDepartment.addEventListener('change', updateTable);
+
+  // 初期表示時に空のセルを非表示にする
+  updateTable();
 </script>
 
 </body>
