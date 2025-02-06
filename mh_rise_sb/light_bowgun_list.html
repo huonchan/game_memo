@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>テーブル行の表示・非表示</title>
+<style>
+  .hidden-row {
+    display: none;
+  }
+</style>
+</head>
+<body>
+
+<h1>商品一覧</h1>
+
+<label><input type="checkbox" id="check1"> 1行目を表示</label><br>
+<label><input type="checkbox" id="check2"> 2行目を表示</label><br>
+<label><input type="checkbox" id="check3"> 3行目を表示</label><br>
+
+<table>
+  <thead>
+    <tr>
+      <th>商品名</th>
+      <th>価格</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr id="row1">
+      <td>りんご</td>
+      <td>100円</td>
+    </tr>
+    <tr id="row2">
+      <td>みかん</td>
+      <td>80円</td>
+    </tr>
+    <tr id="row3">
+      <td>バナナ</td>
+      <td>120円</td>
+    </tr>
+  </tbody>
+</table>
+
+<script>
+  const check1 = document.getElementById('check1');
+  const check2 = document.getElementById('check2');
+  const check3 = document.getElementById('check3');
+  const row1 = document.getElementById('row1');
+  const row2 = document.getElementById('row2');
+  const row3 = document.getElementById('row3');
+
+  check1.addEventListener('change', () => {
+    row1.classList.toggle('hidden-row', !check1.checked);
+  });
+
+  check2.addEventListener('change', () => {
+    row2.classList.toggle('hidden-row', !check2.checked);
+  });
+
+  check3.addEventListener('change', () => {
+    row3.classList.toggle('hidden-row', !check3.checked);
+  });
+</script>
+
+</body>
+</html>
